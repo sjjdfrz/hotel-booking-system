@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: HotelBooking
+
+  datasource:
+    url: jdbc:postgresql://db:5432/hotel_booking
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+zarinpal:
+  merchant-id: "2940b83c-a828-47d5-815f-0af13ab71b19"
+  request-url: "https://sandbox.zarinpal.com/pg/v4/payment/request.json"
+  verification-url: "https://sandbox.zarinpal.com/pg/v4/payment/verify.json"
+  gateway-url: "https://sandbox.zarinpal.com/pg/StartPay/"
+  callback-url: "http://localhost:8080/api/payment/callback"
+
+# JWT Configuration
+jwt:
+  secret-key: "404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970"
+  expiration: 86400000 # a day
+  refresh-token-expiration: 604800000 # 7 days
+
+app:
+  name: "HotelBooking"
