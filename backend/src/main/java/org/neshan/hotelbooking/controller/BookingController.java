@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @RequestMapping("/api")
 @Tag(name = "Bookings")
-@CrossOrigin(origins = "http://localhost")
+@CrossOrigin(origins = "http://localhost:8081")
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class BookingController {
     BookingService bookingService;

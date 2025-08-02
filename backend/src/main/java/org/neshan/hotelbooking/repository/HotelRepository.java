@@ -32,7 +32,7 @@ public interface HotelRepository extends JpaRepository<Hotel, Long> {
                 FROM available_rooms ar
                 ORDER BY ar.hotel_id, ar.price_per_night
             )
-            SELECT h.id, h.name, h.city, h.address, 'http://localhost/images/' || h.image_path as image_path, h.stars, h.rate, h.votes, h.features,
+            SELECT h.id, h.name, h.city, h.address, 'http://localhost:8081/images/' || h.image_path as image_path, h.stars, h.rate, h.votes, h.features,
                    (cr.price_per_night * EXTRACT(DAY FROM (CAST(:dateTo AS TIMESTAMP) - CAST(:dateFrom AS TIMESTAMP)))) AS price,
                     CAST(EXTRACT(DAY FROM (CAST(:dateTo AS TIMESTAMP) - CAST(:dateFrom AS TIMESTAMP))) AS INTEGER) AS night_count
             FROM hotels h

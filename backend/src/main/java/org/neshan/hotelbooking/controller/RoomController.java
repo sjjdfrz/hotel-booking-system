@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost")
+@CrossOrigin(origins = "http://localhost:8081")
 @Tag(name = "Rooms")
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class RoomController {

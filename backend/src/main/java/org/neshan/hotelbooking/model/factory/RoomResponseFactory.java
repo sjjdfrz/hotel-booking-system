@@ -8,7 +8,7 @@ import java.util.Comparator;
 import java.util.List;
 
 public class RoomResponseFactory {
-    public static final String BASE_PATH = "http://localhost/images/";
+    public static final String BASE_PATH = "http://localhost:8081/images/";
 
     public static RoomResponse fromEntities(List<Room> rooms, Hotel hotel, int nightsCount) {
         List<RoomResponse.RoomDTO> roomDTOS = rooms.stream()

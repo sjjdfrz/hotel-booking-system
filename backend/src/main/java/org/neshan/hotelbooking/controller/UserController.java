@@ -23,7 +23,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("/api")
 @Tag(name = "Users")
-@CrossOrigin(origins = "http://localhost")
+@CrossOrigin(origins = "http://localhost:8081")
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class UserController {
     BookingService bookingService;

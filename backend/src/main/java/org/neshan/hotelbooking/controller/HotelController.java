@@ -17,7 +17,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("/api")
 @Tag(name = "Hotels")
-@CrossOrigin(origins = "http://localhost")
+@CrossOrigin(origins = "http://localhost:8081")
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 class HotelController {
     HotelService hotelService;

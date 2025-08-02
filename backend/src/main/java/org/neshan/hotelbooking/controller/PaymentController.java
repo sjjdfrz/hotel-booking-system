@@ -17,7 +17,7 @@ import org.springframework.web.servlet.view.RedirectView;
 @RequiredArgsConstructor
 @RequestMapping("/api")
 @Tag(name = "Payments")
-@CrossOrigin(origins = "http://localhost")
+@CrossOrigin(origins = "http://localhost:8081")
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class PaymentController {
     PaymentService paymentService;
@@ -38,8 +38,8 @@ public class PaymentController {
         boolean verified = paymentService.verifyPayment(authority, status);
 
         String redirectUrl = verified ?
-                "http://localhost/payment-success":
-                "http://localhost/payment-failure";
+                "http://localhost:8081/payment-success":
+                "http://localhost:8081/payment-failure";
 
         return new RedirectView(redirectUrl);
     }
